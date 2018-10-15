@@ -13,7 +13,7 @@ node {
       sh 'pwd'
       if (isUnix()) {
          //sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
-         sh 'java -jar dbAuomation.jar CreateTable.sql'
+         sh 'java -jar /home/azureAdmin/dbAuomation.jar CreateTable.sql'
       } else {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
