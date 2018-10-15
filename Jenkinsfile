@@ -10,6 +10,7 @@ node {
    }
    stage('Build') {
       // Run the maven build
+      sh 'pwd'
       if (isUnix()) {
          //sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
          sh 'java -jar dbAuomation.jar CreateTable.sql'
